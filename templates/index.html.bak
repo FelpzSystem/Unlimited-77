@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNLIMITED 77 | SYSTEM</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        
+        <header class="hero">
+            <img src="https://i.postimg.cc/Hk2p3vkw/23aea6f0508ba2249d444472fc6c6f1a-(1).jpg" class="logo-img" alt="Logo">
+            <h1 class="glitch-title" data-text="UNLIMITED 77">UNLIMITED 77</h1>
+            <p style="font-size: 0.7rem; color: #444; margin-top: 15px;">[ CENTRAL DA UNLIMITED 77 ]</p>
+            <p style="font-size: 0.6rem; color: #333; margin-top: 40px;">ROLE PARA BAIXO</p>
+            <div style="color: var(--primary); font-size: 1.5rem; margin-top: 5px;">⋮</div>
+        </header>
+
+        <section>
+            <h2 class="section-title"><span>[</span> LINKS <span>]</span></h2>
+            <p style="font-size: 0.7rem; color: #555; margin-bottom: 30px;">Acesse nossos grupos e redes sociais</p>
+            
+            <div class="links-grid">
+                <a href="https://whatsapp.com/channel/0029Vb7HWJuLNSa87Ul6aw2S" target="_blank" class="card-link">
+                    <div class="link-content">
+                        <h3>Channel WhatsApp</h3>
+                        <p>Canal oficial de avisos</p>
+                    </div>
+                    <span style="color: var(--primary);">↗</span>
+                </a>
+
+                <a href="https://chat.whatsapp.com/EUwu8l2w0HTKzi9frQN17u" target="_blank" class="card-link">
+                    <div class="link-content">
+                        <h3>Grupo Principal</h3>
+                        <p>Chat da comunidade Unlimited</p>
+                    </div>
+                    <span style="color: var(--primary);">↗</span>
+                </a>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title"><span>[</span> NÓS <span>]</span></h2>
+            <p style="font-size: 0.7rem; color: #555;">Os guardiões da UNLIMITED</p>
+
+            <div class="staff-card">
+                <div class="avatar-box">💀</div>
+                <div class="staff-info">
+                    <span class="role">SUPREMA LIDERANÇA</span>
+                    <h4>GHST ACK Ackerman</h4>
+                    <p class="desc">Líder supremo da UNLIMITED 77. Mestre das sombras e guardião dos segredos.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            © 2026 UNLIMITED 77 • TODOS OS DIREITOS RESERVADOS<br>
+            SITE CODADO BY GHST ACK
+        </footer>
+
+    </div>
+</body>
+</html>

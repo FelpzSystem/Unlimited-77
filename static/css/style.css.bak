@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+:root {
+    --primary: #ff0000;
+    --primary-glow: rgba(255, 0, 0, 0.7);
+    --bg-black: #080808;
+    --card-bg: rgba(15, 15, 15, 0.9);
+    --border-color: rgba(255, 0, 0, 0.3);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--bg-black);
+    color: white;
+    font-family: 'JetBrains Mono', monospace;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Efeito de Scanlines (Linhas de TV antiga) */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.2) 50%), 
+                linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+    background-size: 100% 3px, 3px 100%;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* Aura Vermelha na Lateral */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; width: 4px; height: 100%;
+    background: var(--primary);
+    box-shadow: 0 0 20px var(--primary-glow);
+    z-index: 100;
+}
+
+.container {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+}
+
+/* HERO SECTION */
+.hero {
+    margin-bottom: 60px;
+    animation: fadeInDown 1s ease-out;
+}
+
+.logo-img {
+    width: 220px;
+    height: 220px;
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.glitch-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    position: relative;
+    text-shadow: 0 0 10px var(--primary-glow);
+}
+
+.glitch-title::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0; left: -2px;
+    text-shadow: 2px 0 #fff;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-1 3s infinite linear alternate-reverse;
+}
+
+/* SEÇÃO DE LINKS */
+.section-title {
+    font-size: 1.2rem;
+    color: var(--primary);
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.links-grid {
+    display: grid;
+    gap: 12px;
+    margin-bottom: 60px;
+}
+
+.card-link {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-radius: 2px;
+}
+
+.card-link:hover {
+    border-color: var(--primary);
+    transform: translateX(10px);
+    box-shadow: -5px 0 15px var(--primary-glow);
+    background: rgba(255, 0, 0, 0.05);
+}
+
+.link-content h3 { font-size: 1rem; text-transform: uppercase; text-align: left; }
+.link-content p { font-size: 0.7rem; color: #666; text-align: left; }
+
+/* SEÇÃO STAFF / EQUIPE */
+.staff-card {
+    background: rgba(255, 0, 0, 0.02);
+    border: 1px solid var(--primary);
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    text-align: left;
+    margin-top: 20px;
+    position: relative;
+}
+
+.staff-card::before {
+    content: "LÍDER";
+    position: absolute;
+    top: -10px; right: 10px;
+    background: var(--primary);
+    font-size: 10px;
+    padding: 2px 8px;
+    font-weight: bold;
+}
+
+.avatar-box {
+    width: 80px;
+    height: 80px;
+    background: #000;
+    border: 1px solid var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.staff-info h4 { color: #fff; font-size: 1.1rem; text-transform: uppercase; }
+.staff-info .role { color: var(--primary); font-size: 0.7rem; font-weight: bold; display: block; margin-bottom: 5px; }
+.staff-info .desc { font-size: 0.8rem; color: #999; line-height: 1.3; }
+
+/* Animações */
+@keyframes glitch-1 {
+    0% { clip: rect(20px, 9999px, 40px, 0); }
+    100% { clip: rect(60px, 9999px, 80px, 0); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+footer {
+    margin-top: 80px;
+    font-size: 0.7rem;
+    color: #333;
+    letter-spacing: 2px;
+}
